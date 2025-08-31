@@ -19,7 +19,7 @@ function cloneAndInsertColumn(colIndexToClone, insertBeforeColIndex) {
     sec.querySelectorAll('tr').forEach((row) => {
       const cells = Array.from(row.children);
 
-      if (cells.length === 0) {
+      if (cells.length <= colIndexToClone) {
         return;
       }
 
